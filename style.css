@@ -1,0 +1,759 @@
+Theme Name: WP Style Tiles
+Theme URI: http://jes.se.com/wp-style-tiles
+Description: Dynamically built style tiles. Concept, Design and Front-End Development by Steve Fisher http://hellofisher.com.  WP Theme Development by Jesse Friedman http://jes.se.com
+Author: Jesse Friedman
+Author URI: http://jes.se.com
+Version: .9
+
+
+/* ============================================================
+
+320 and Up by Andy Clarke
+Version: 3.0
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0
+
+============================================================ */
+/* Reset =================================================== */
+html,body,body div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0}
+article,aside,figure,footer,header,hgroup,nav,section{display:block}
+
+/* Variables =================================================== */
+.clearfix{zoom:1}
+.clearfix:before,.clearfix:after{display:table;content:""}
+.clearfix:after{clear:both}
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{position:static;clip:auto;height:auto;width:auto;overflow:visible;margin:0}
+
+/* Page =================================================== */
+html{background:#fff;font-size:62.5%;-webkit-tap-highlight-color:#f3f5f6;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{width:100%;background-color:transparent;font-family:'Open Sans', sans-serif;font-size:1.6rem;line-height:1.5em;color:#000;margin:0;padding:0}
+
+/* Typography =================================================== */
+h1,h2,h3,h4,h5,h6{font-family:inherit;font-weight:700;color:inherit;text-rendering:optimizelegibility;margin:0}
+h1 small,h2 small{font-weight:400;color:#bfbfbf}
+h1,.h1{margin-bottom:.75em;font-size:3.2rem;line-height:1.2}
+h2,.h2{margin-bottom:.75em;font-size:2.4rem;line-height:1.2}
+h3,.h3{margin-bottom:1em;font-size:2.1rem;line-height:1.3}
+h4,.h4{margin-bottom:1.5em;font-size:1.8rem;line-height:1.25}
+h5,.h5{font-size:1.6rem;margin-bottom:1.5em}
+h6,.h6{margin-bottom:1.5em;font-size:1.4rem;font-weight:400;letter-spacing:1px;text-transform:uppercase}
+.header h1,.header h2,.header h3{float:left;margin-right:24px}
+.header h1 a,.header h2 a,.header h3 a{display:block;position:relative;top:6px;float:right;font-size:1.4rem;background-color:#f3f5f6;padding:4px 12px}
+.header h1:hover,.header h2:hover,.header h3:hover{background-color:#f3f5f6}
+.header .a-rss,.header .a-rss:hover{float:left;width:16px;height:16px;background:transparent url(../img/a-rss.png) no-repeat 0 0;text-indent:100%;white-space:nowrap;overflow:hidden;padding:0}
+p,ol,ul,dl,address{margin-bottom:1.5em;font-size:1.4rem;line-height:1.5em}
+small{font-size:1.4rem}
+ul,ol{margin:0 0 1.5em -24px;padding:0 0 0 24px}
+li ul,li ol{font-size:1.6rem;margin:0}
+blockquote{padding-left:24px;border-left:2px solid #c7ced6;font-style:normal;margin:0 0 1.5em -24px}
+q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+cite{font-style:normal}
+dl,dd{margin-bottom:1.5em}
+.dl-horizontal dt{float:left;clear:left;width:20.25%;text-align:right}
+.dl-horizontal dd{margin-left:22.78%}
+abbr[title]{border-bottom:1px dotted #c7ced6;cursor:help}
+dfn{font-style:italic}
+ins{background-color:#f3f5f6;color:#000;text-decoration:none}
+mark{background-color:#f3f5f6;color:#000;font-style:italic;font-weight:700}
+pre,code,kbd,samp{font-family:Monaco, Courier New, monospace;font-size:1.4rem;line-height:1.5em}
+pre{white-space:pre-wrap;word-wrap:break-word}
+sub,sup{position:relative;font-size:1.2rem;line-height:0;vertical-align:baselineheight}
+sup{top:-.5em}
+sub{bottom:-.25em}
+dt,b,strong{font-weight:700}
+
+/* Colour =================================================== */
+a{text-decoration:none;color:#169ce2}
+a:visited{color:#169ce2}
+a:hover{text-decoration:underline;color:#011b35}
+a:focus{outline:thin dotted;color:#000}
+a:hover,a:active{outline:0}
+::-moz-selection,::selection{background-color:#d6dbe1;color:#2d353e;text-shadow:none}
+
+/* Font Awesome: http://fortawesome.github.com/Font-Awesome/
+
+License
+-------------------------------------------------------
+The Font Awesome webfont, CSS, and LESS files are licensed under CC BY 3.0:
+http://creativecommons.org/licenses/by/3.0/ A mention of
+'Font Awesome - http://fortawesome.github.com/Font-Awesome' in human-readable
+source code is considered acceptable attribution (most common on the web).
+If human readable source code is not available to the end user, a mention in
+an 'About' or 'Credits' screen is considered acceptable (most common in desktop
+or mobile software). */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svgz#FontAwesomeRegular') format('svg'), url('../fonts/fontawesome-webfont.svg#FontAwesomeRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+li[class^="icon-"],
+li[class*=" icon-"] {
+  display: block;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+}
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: top;
+  font-size: 1.3333333333333333em;
+}
+.btn [class^="icon-"],
+.btn [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+
+  line-height: .9em;
+}
+li [class^="icon-"],
+li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+li .icon-large[class^="icon-"],
+li .icon-large[class*=" icon-"] {
+  /* 1.5 increased font size for icon-large * 1.25 width */
+
+  width: 1.875em;
+}
+li[class^="icon-"],
+li[class*=" icon-"] {
+  margin-left: 0;
+  list-style-type: none;
+}
+li[class^="icon-"]:before,
+li[class*=" icon-"]:before {
+  text-indent: -2em;
+  text-align: center;
+}
+li[class^="icon-"].icon-large:before,
+li[class*=" icon-"].icon-large:before {
+  text-indent: -1.3333333333333333em;
+}
+/*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+    readers do not read off random characters that represent icons */
+.icon-glass:before {
+  content: "\f000";
+}
+.icon-music:before {
+  content: "\f001";
+}
+.icon-search:before {
+  content: "\f002";
+}
+.icon-envelope:before {
+  content: "\f003";
+}
+.icon-heart:before {
+  content: "\f004";
+}
+.icon-star:before {
+  content: "\f005";
+}
+.icon-star-empty:before {
+  content: "\f006";
+}
+.icon-user:before {
+  content: "\f007";
+}
+.icon-film:before {
+  content: "\f008";
+}
+.icon-th-large:before {
+  content: "\f009";
+}
+.icon-th:before {
+  content: "\f00a";
+}
+.icon-th-list:before {
+  content: "\f00b";
+}
+.icon-ok:before {
+  content: "\f00c";
+}
+.icon-remove:before {
+  content: "\f00d";
+}
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+.icon-zoom-out:before {
+  content: "\f010";
+}
+.icon-off:before {
+  content: "\f011";
+}
+.icon-signal:before {
+  content: "\f012";
+}
+.icon-cog:before {
+  content: "\f013";
+}
+.icon-trash:before {
+  content: "\f014";
+}
+.icon-home:before {
+  content: "\f015";
+}
+.icon-file:before {
+  content: "\f016";
+}
+.icon-time:before {
+  content: "\f017";
+}
+.icon-road:before {
+  content: "\f018";
+}
+.icon-download-alt:before {
+  content: "\f019";
+}
+.icon-download:before {
+  content: "\f01a";
+}
+.icon-upload:before {
+  content: "\f01b";
+}
+.icon-inbox:before {
+  content: "\f01c";
+}
+.icon-play-circle:before {
+  content: "\f01d";
+}
+.icon-repeat:before {
+  content: "\f01e";
+}
+/* \f020 is not a valid unicode character. all shifted one down */
+.icon-refresh:before {
+  content: "\f021";
+}
+.icon-list-alt:before {
+  content: "\f022";
+}
+.icon-lock:before {
+  content: "\f023";
+}
+.icon-flag:before {
+  content: "\f024";
+}
+.icon-headphones:before {
+  content: "\f025";
+}
+.icon-volume-off:before {
+  content: "\f026";
+}
+.icon-volume-down:before {
+  content: "\f027";
+}
+.icon-volume-up:before {
+  content: "\f028";
+}
+.icon-qrcode:before {
+  content: "\f029";
+}
+.icon-barcode:before {
+  content: "\f02a";
+}
+.icon-tag:before {
+  content: "\f02b";
+}
+.icon-tags:before {
+  content: "\f02c";
+}
+.icon-book:before {
+  content: "\f02d";
+}
+.icon-bookmark:before {
+  content: "\f02e";
+}
+.icon-print:before {
+  content: "\f02f";
+}
+.icon-camera:before {
+  content: "\f030";
+}
+.icon-font:before {
+  content: "\f031";
+}
+.icon-bold:before {
+  content: "\f032";
+}
+.icon-italic:before {
+  content: "\f033";
+}
+.icon-text-height:before {
+  content: "\f034";
+}
+.icon-text-width:before {
+  content: "\f035";
+}
+.icon-align-left:before {
+  content: "\f036";
+}
+.icon-align-center:before {
+  content: "\f037";
+}
+.icon-align-right:before {
+  content: "\f038";
+}
+.icon-align-justify:before {
+  content: "\f039";
+}
+.icon-list:before {
+  content: "\f03a";
+}
+.icon-indent-left:before {
+  content: "\f03b";
+}
+.icon-indent-right:before {
+  content: "\f03c";
+}
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+.icon-picture:before {
+  content: "\f03e";
+}
+.icon-pencil:before {
+  content: "\f040";
+}
+.icon-map-marker:before {
+  content: "\f041";
+}
+.icon-adjust:before {
+  content: "\f042";
+}
+.icon-tint:before {
+  content: "\f043";
+}
+.icon-edit:before {
+  content: "\f044";
+}
+.icon-share:before {
+  content: "\f045";
+}
+.icon-check:before {
+  content: "\f046";
+}
+.icon-move:before {
+  content: "\f047";
+}
+.icon-step-backward:before {
+  content: "\f048";
+}
+.icon-fast-backward:before {
+  content: "\f049";
+}
+.icon-backward:before {
+  content: "\f04a";
+}
+.icon-play:before {
+  content: "\f04b";
+}
+.icon-pause:before {
+  content: "\f04c";
+}
+.icon-stop:before {
+  content: "\f04d";
+}
+.icon-forward:before {
+  content: "\f04e";
+}
+.icon-fast-forward:before {
+  content: "\f050";
+}
+.icon-step-forward:before {
+  content: "\f051";
+}
+.icon-eject:before {
+  content: "\f052";
+}
+.icon-chevron-left:before {
+  content: "\f053";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+.icon-plus-sign:before {
+  content: "\f055";
+}
+.icon-minus-sign:before {
+  content: "\f056";
+}
+.icon-remove-sign:before {
+  content: "\f057";
+}
+.icon-ok-sign:before {
+  content: "\f058";
+}
+.icon-question-sign:before {
+  content: "\f059";
+}
+.icon-info-sign:before {
+  content: "\f05a";
+}
+.icon-screenshot:before {
+  content: "\f05b";
+}
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+.icon-arrow-left:before {
+  content: "\f060";
+}
+.icon-arrow-right:before {
+  content: "\f061";
+}
+.icon-arrow-up:before {
+  content: "\f062";
+}
+.icon-arrow-down:before {
+  content: "\f063";
+}
+.icon-share-alt:before {
+  content: "\f064";
+}
+.icon-resize-full:before {
+  content: "\f065";
+}
+.icon-resize-small:before {
+  content: "\f066";
+}
+.icon-plus:before {
+  content: "\f067";
+}
+.icon-minus:before {
+  content: "\f068";
+}
+.icon-asterisk:before {
+  content: "\f069";
+}
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+.icon-gift:before {
+  content: "\f06b";
+}
+.icon-leaf:before {
+  content: "\f06c";
+}
+.icon-fire:before {
+  content: "\f06d";
+}
+.icon-eye-open:before {
+  content: "\f06e";
+}
+.icon-eye-close:before {
+  content: "\f070";
+}
+.icon-warning-sign:before {
+  content: "\f071";
+}
+.icon-plane:before {
+  content: "\f072";
+}
+.icon-calendar:before {
+  content: "\f073";
+}
+.icon-random:before {
+  content: "\f074";
+}
+.icon-comment:before {
+  content: "\f075";
+}
+.icon-magnet:before {
+  content: "\f076";
+}
+.icon-chevron-up:before {
+  content: "\f077";
+}
+.icon-chevron-down:before {
+  content: "\f078";
+}
+.icon-retweet:before {
+  content: "\f079";
+}
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+.icon-folder-close:before {
+  content: "\f07b";
+}
+.icon-folder-open:before {
+  content: "\f07c";
+}
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+.icon-bar-chart:before {
+  content: "\f080";
+}
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+.icon-camera-retro:before {
+  content: "\f083";
+}
+.icon-key:before {
+  content: "\f084";
+}
+.icon-cogs:before {
+  content: "\f085";
+}
+.icon-comments:before {
+  content: "\f086";
+}
+.icon-thumbs-up:before {
+  content: "\f087";
+}
+.icon-thumbs-down:before {
+  content: "\f088";
+}
+.icon-star-half:before {
+  content: "\f089";
+}
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+.icon-signout:before {
+  content: "\f08b";
+}
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+.icon-pushpin:before {
+  content: "\f08d";
+}
+.icon-external-link:before {
+  content: "\f08e";
+}
+.icon-signin:before {
+  content: "\f090";
+}
+.icon-trophy:before {
+  content: "\f091";
+}
+.icon-github-sign:before {
+  content: "\f092";
+}
+.icon-upload-alt:before {
+  content: "\f093";
+}
+.icon-lemon:before {
+  content: "\f094";
+}
+
+/* Elements =================================================== */
+hr{display:block;height:1px;border:0;border-top:1px solid #c7ced6;border-bottom:1px solid #fff;margin:1em 0;padding:0}
+img{max-width:100%;vertical-align:middle;-ms-interpolation-mode:bicubic;border-width:0}
+svg:not(:root){overflow:hidden}
+figure{margin-bottom:1.5em}
+figure img{margin-bottom:.375em}
+figure figcaption{display:block;font-weight:400;font-size:1.4rem;color:gray}
+.list-bordered{list-style-type:none;margin:0 0 1.5em;padding:0}
+.list-bordered li{margin-bottom:.375em;padding-bottom:.375em;border-bottom:1px dashed #c7ced6}
+.list-bordered li:last-child{margin-bottom:0;padding-bottom:0;border-bottom-width:0}
+
+/* Forms =================================================== */
+form{margin:0 0 1.5em}
+form fieldset{margin-bottom:1.5em;border-width:0;padding:0}
+form legend{display:block;width:100%;margin-bottom:3em;margin-left:-7px;color:#000;border:0;border-bottom:1px solid #8c9bab;white-space:normal;padding:0}
+form legend small{font-size:1.4rem;color:#bfbfbf}
+form p{margin-bottom:.75em}
+form ul{list-style-type:none;margin:0 0 1.5em;padding:0}
+label,input,button,select,textarea{font-size:1.4rem;vertical-align:middle}
+input,button,select,textarea{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}
+label{display:block;margin-bottom:.1875em;font-weight:700;color:#000;cursor:pointer}
+label input,label textarea,label select{display:block}
+input,textarea,select{display:inline-block;width:100%;margin-bottom:.375em;background-color:#fff;border:1px solid #8c9bab;color:#000;padding:4px}
+input:hover,textarea:hover,select:hover{border-color:#586879}
+.input-mini{width:60px}
+.input-small{width:90px}
+input[type=image],input[type=checkbox],input[type=radio]{width:auto;height:auto;line-height:normal;cursor:pointer;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;border:0 \9;margin:0 0 3px;padding:0}
+input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;width:13px;height:13px;padding:0}
+input[type=image]{border:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}
+input[type=file]{width:auto;line-height:initial;border:initial;background-color:initial;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;padding:initial}
+input[type=button],input[type=reset],input[type=submit]{width:auto;height:auto;cursor:pointer;overflow:visible}
+select,input[type=file]{height:28px;margin-top:4px;line-height:28px}
+select{width:auto;background-color:#fff;font-size:1.3rem}
+select[multiple],select[size]{height:auto}
+textarea{resize:vertical;height:auto;overflow:auto;vertical-align:top}
+.radio,.checkbox{padding-left:18px;font-weight:400}
+.radio input[type=radio],.checkbox input[type=checkbox]{float:left;margin-left:-18px}
+.radio.inline,.checkbox.inline{display:inline-block;padding-top:5px;margin-bottom:0;vertical-align:middle}
+.radio.inline + .radio.inline,.checkbox.inline + .checkbox.inline{margin-left:10px}
+input[disabled],select[disabled],textarea[disabled],input[readonly],select[readonly],textarea[readonly]{-webkit-opacity:0.5;-moz-opacity:0.5;opacity:0.5;cursor:not-allowed}
+input:focus,textarea:focus{outline:thin dotted \9;border-color:#2d353e, 0}
+input[type=file]:focus,input[type=radio]:focus,input[type=checkbox]:focus,select:focus{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}
+.help-block,.help-inline{color:gray}
+.help-block{display:block;margin-bottom:.75em}
+.help-inline{display:inline-block;vertical-align:middle;padding-left:5px}
+.form-search .search-query{padding-left:14px;padding-right:14px;margin-bottom:0;-webkit-border-radius:14px;-moz-border-radius:14px;border-radius:14px}
+form br,input[type=hidden]{display:none}
+::-webkit-input-placeholder,input:-moz-placeholder{font-size:1.4rem}
+.form-inline input,.form-inline textarea,.form-inline select,.form-search input,.form-search textarea,.form-search select{display:inline-block;margin-bottom:0}
+.form-inline label,.form-search label{display:inline-block}
+.form-inline .radio,.form-inline .checkbox,.form-inline .radio,.form-search .radio,.form-search .checkbox,.form-inline .radio{padding-left:0;margin-bottom:0;vertical-align:middle}
+.form-inline .radio input[type=radio],.form-inline .checkbox input[type=checkbox],.form-search .radio input[type=radio],.form-search .checkbox input[type=checkbox]{float:left;margin-left:0;margin-right:3px}
+
+/* Buttons =================================================== */
+.btn,.btn:visited{display:inline;zoom:1;margin-bottom:0;line-height:1.5em;color:#fff;text-align:center;vertical-align:middle;background-color:#272727;border:1px solid #ccc;border-color:#1b1b1b #1b1b1b #0e0e0e;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;cursor:pointer;margin-left:.3em;padding:6px 11px}
+.btn:hover,.btn:focus{background-color:#feb620;color:#fff;text-decoration:none;border-color:#f7ac0f #f7ac0f #e59e09}
+input[type=submit].btn:hover{border-color:#ccc}
+.btn:first-child{margin-left:0}
+.btn-disabled{-webkit-opacity:0.5;-moz-opacity:0.5;opacity:0.5;cursor:default}
+
+/* Tables =================================================== */
+table{width:100%;max-width:100%;margin-bottom:1.5em;border-collapse:collapse;border-spacing:0;background-color:transparent}
+table th,table td{vertical-align:top;border-top:1px solid #8c9bab;font-size:1.4rem;line-height:1.5em;text-align:left;padding:8px}
+table th{font-weight:700}
+table thead th{vertical-align:bottom}
+table tbody + tbody{border-top:2px solid #8c9bab}
+table tbody tr td,table tbody tr th{-webkit-transition:background-color .25s 0 linear;-moz-transition:background-color .25s 0 linear;-ms-transition:background-color .25s 0 linear;-o-transition:background-color .25s 0 linear;transition:background-color .25s 0 linear}
+table tbody tr:hover td,table tbody tr:hover th{background-color:#a9b4c1}
+.table-condensed th,.table-condensed td{padding:4px 5px}
+.table-bordered{border:1px solid #8c9bab;border-left:0;border-collapse:collapsed}
+.table-bordered th,.table-bordered td{border-left:1px solid #8c9bab}
+.table-striped tbody tr:nth-child(odd) td,.table-striped tbody tr:nth-child(odd) th{background-color:#c7ced6}
+table colgroup + thead tr:first-child th,table colgroup + thead tr:first-child td,table thead:first-child tr:first-child th,table thead:first-child tr:first-child td,.table-bordered thead:first-child tr:first-child th,.table-bordered tbody:first-child tr:first-child th,.table-bordered tbody:first-child tr:first-child td{border-top:0}
+
+/* Print =================================================== */
+@media print {
+*{background:transparent!important;color:#000!important;box-shadow:none!important;text-shadow:none!important;filter:none!important;-ms-filter:none!important}
+@page{margin:.5cm}
+h2,h3{orphans:3;widows:3;page-break-after:avoid}
+p{orphans:3;widows:3}
+pre,blockquote{border:1px solid gray;page-break-inside:avoid}
+abbr[title]:after{content:" (" attr(title) ")"}
+a,a:visited{text-decoration:underline}
+a[href]:after{content:" (" attr(href) ")"}
+a[href^=javascript:]:after,a[href^=#]:after{content:""}
+img{max-width:100%!important;page-break-inside:avoid}
+thead{display:table-header-group}
+tr{page-break-inside:avoid}
+}
+
+/* Custom =================================================== */
+html{background:#f5f0e6 url(../img/bg.jpg);}
+h1, h2, h3, h4, h5 {font-family: 'Lato', sans-serif; color: #999;}
+h1 {font-weight: 100; font-size: 3em; margin-bottom: .5em; line-height: 1.2;}
+h2 {margin-bottom: 0.75em;font-size: 20px;font-size: 2rem;line-height: 1.2;font-weight: 300;text-transform: uppercase;}
+p, ol, ul, dl, address {margin-bottom: 1em;font-size: 16px;font-size: 1.6rem;line-height: 1.5em;}
+blockquote {margin: 1em; font-style: italic;}
+.row {margin: 0 auto; max-width: 960px; padding: 0 1em;}
+section {padding: 30px 0;}
+header {/*position: fixed; */background: #222; padding: 1em 0; width: 100%;}
+header a, header a:visited {color: #fff;}
+header a:hover, header a:focus {color: #feb620; text-decoration: none;border-bottom: 1px solid #feb620;}
+header h1 {font-family: 'Lato', sans-serif; font-weight: 100; font-size: 2em; margin-bottom: 0;}
+.group {margin-bottom: 2em;}
+.grid.half {margin:0 0 20px;}
+
+/* Nav */
+nav {font-family: 'Lato', sans-serif; font-weight: 100;}
+nav a {line-height: 35px;margin-right: 1em;}
+nav a:last-child {margin-right: 0;}
+nav a.active, nav a.active:visited {color: #feb620; }
+nav a.active:hover, nav a.active:focus {border-bottom: 1px solid #feb620;}
+.btn.forward {margin: 2em 0;/*float: left;*/}
+.btn.back, .btn.back:visited {float: left; margin: 2em 1em 2em 0;background-color:rgb(155, 153, 147);border:1px solid #ccc;border-color:#8f8d87 #8f8d87 #817f79;}
+.btn.back:hover, .btn.back:focus {background-color:#feb620;color:#fff;text-decoration:none;border-color:#f7ac0f #f7ac0f #e59e09}
+
+/* Branding */
+ul.adjectives li {background:#fff; -webkit-border-radius: 3px; border-radius: 3px; padding: .4em 1em; list-style: none; display: inline-block; margin-right: .5em; color:; font-size: .9em; margin-bottom: .5em;}
+.color {display: inline-block; height: 50px; padding: 0; margin: 0 -8px 0 0; border: 5px solid #fff;}
+.primary.color {width: 100px;}
+.secondary.color {width: 50px;}
+.background.color {width: 155px;}
+
+.primary.color {background: #eba200;}
+.secondary.color.v1 {background:#169ce2;}
+.secondary.color.v2 {background:#472008;}
+.secondary.color.v3 {background:#302d26;}
+.background.color {background:#f5f0e6;}
+
+.logo {max-width: 300px; width: 66%;}
+
+
+/* Typography */
+.one {max-width: 700px;}
+h1.one, h2.one, h3.one {font-family: 'Oswald', sans-serif; font-weight: normal; color:#472008;}
+p.one, ol.one, ul.one, dl.one, address.one, blockquote.one {font-family: 'Lora', serif;color: #302d26}
+blockquote.one {font-size: 1.5em; line-height: 1.25; margin: 1em; font-style: italic;border-left: 3px solid #472008;}
+
+/* Interactive */
+.btn.one {background: }
+
+/* Media */
+video {width: 100%;height: auto;}
+img.one {display: block; vertical-align: top; margin: 1em 1em 0 0; max-width: 100%;width:100%;}
+img.half {width: 50%;}
+img.third {width: 33%;}
+img.thumbnail {width: 25%; max-width: 150px;}
+p.caption {margin-bottom: 2em;}
+
+/* Textures */
+.group.texture {padding: 20px 20px 0; background: #fff;}
+
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+    .grid.half {width: 47.5%; float: left; margin:0 5% 20px 0;}
+    .grid.half:nth-child(even) {margin: 0 0 5%;}
+    .grid.third {width: 32%; float: left; margin:0 2% 3% 0;}
+    .grid.third:nth-child(3n+2) {margin: 0 0 3%;}
+
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+  header h1 {float: left;}
+  nav {float: right;}
+
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+}
